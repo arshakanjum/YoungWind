@@ -406,7 +406,7 @@ text-align: center;
 }
 
 .eventButton {
-  display: inline-block;
+  display: block;
   font-family: "montserrat-medium", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -414,7 +414,7 @@ text-align: center;
   height: 5.4rem;
   line-height: calc(5.4rem - .4rem);
   padding: 0 3rem;
-  margin: 0 .3rem 1.2rem 0;
+  margin: 15px .3rem 1.2rem 0;
   color: #000000;
   text-decoration: none;
   text-align: center;
