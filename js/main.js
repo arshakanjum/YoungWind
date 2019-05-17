@@ -446,13 +446,33 @@
             }
         });
     };
-   
+var popup = function(){
+    $('.eventButton').click(function(e){
+        $('.pop-up').addClass('open');
+        e.stopPropagation();
+      });
+      
+      $('.pop-up .close').click(function(){
+        $('.pop-up').removeClass('open');
+      });
 
+      $(document).keydown(function(e) {
+        // ESCAPE key pressed
+        if (e.keyCode == 27) {
+            $('.pop-up').removeClass('open');
+        }
+    });
+    $('body').click(function(e){
+        if ($('.pop-up').hasClass('open')){
+            $('.pop-up').removeClass('open');
+        }
+    });
+};
 
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-        
+        popup();
         clPreloader();
         clMenuOnScrolldown();
         clOffCanvas();

@@ -24,12 +24,14 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/popup.css">
 
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/customJquery.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -123,6 +125,10 @@
                     <a href="#about" class="smoothscroll btn btn--stroke">
                         More About Us
                     </a>
+                    <a href="#event" class="eventButton">
+                           Next Event
+                        </a>
+                    
                 </div>
 
             </div>
@@ -222,7 +228,7 @@
                     <i class="fa fa-map"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">YoungWind Trails</h3>
+                    <h3 class="h2">YoungWind<br> Trails</h3>
                     <p>One of the major service that we've been focusing on is designing and
                         implementing trails around various destinations. These are customized experiences
                         that give much more than a touristy-eyed glimpse into new cultures and lands
@@ -249,7 +255,7 @@
                     <i class="icon-megaphone"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">YoungWind Camps</h3>
+                    <h3 class="h2">YoungWind<br> Camps</h3>
                     <p> In today's world, we recognize the dire need for individuals to step outside, face challenges,
                         take risks, learn how to achieve full potential while operating within safety limits, and
                         we find refuge involving people as we indulge in adventure
@@ -314,7 +320,7 @@
 
                             <div class="item-folio__thumb">
                                 <a href="images/portfolio/gallery/2.jpg" class="thumb-link" title="Shutterbug"
-                                    data-size="2050x700">
+                                    data-size="700x1060">
                                     <img src="images/portfolio/2.jpg"
                                         srcset="images/portfolio/2.jpg 2x, images/portfolio/2.jpg 2x" alt="">
                                 </a>
@@ -340,7 +346,7 @@
 
                             <div class="item-folio__thumb">
                                 <a href="images/portfolio/gallery/3.jpg" class="thumb-link" title="Shutterbug"
-                                    data-size="3050x700">
+                                    data-size="1050x700">
                                     <img src="images/portfolio/3.jpg"
                                         srcset="images/portfolio/3.jpg 3x, images/portfolio/3.jpg 2x" alt="">
                                 </a>
@@ -366,7 +372,7 @@
 
                             <div class="item-folio__thumb">
                                 <a href="images/portfolio/gallery/5.jpg" class="thumb-link" title="Shutterbug"
-                                    data-size="5050x700">
+                                    data-size="1050x700">
                                     <img src="images/portfolio/5.jpg"
                                         srcset="images/portfolio/5.jpg 5x, images/portfolio/5.jpg 2x" alt="">
                                 </a>
@@ -392,7 +398,7 @@
 
                             <div class="item-folio__thumb">
                                 <a href="images/portfolio/gallery/4.jpg" class="thumb-link" title="Shutterbug"
-                                    data-size="4050x700">
+                                    data-size="1050x700">
                                     <img src="images/portfolio/4.jpg"
                                         srcset="images/portfolio/4.jpg 4x, images/portfolio/4.jpg 2x" alt="">
                                 </a>
@@ -418,7 +424,7 @@
 
                             <div class="item-folio__thumb">
                                 <a href="images/portfolio/gallery/6.jpg" class="thumb-link" title="Shutterbug"
-                                    data-size="6050x700">
+                                    data-size="1050x700">
                                     <img src="images/portfolio/6.jpg"
                                         srcset="images/portfolio/6.jpg 6x, images/portfolio/6.jpg 2x" alt="">
                                 </a>
@@ -530,75 +536,6 @@
 
     </section> <!-- end s-clients -->
 
-    <!-- Team
-    ================================================== -->
-    <section id="Team" class="s-team">
-    <h3 class="subhead">Meet the Team</h3>
-    <h1 class="display-2 display-2--light">The travel enthusiasts we talked about</h1>
-    <div class="about__section">
-            
-        <!-- Specificity container -->
-        <a href="javascript:void(0);" title="Sayanth Perambra - Founder">
-            <div class="about__slot">
-                <div class="headshot" onclick="biograph(this.parentNode);"
-                    style="background-image:url('../images/Team/team1.jpg');"></div>
-
-                <div class="about__info">
-                    <h4 class="name">Sayanth Perambra</h4>
-                    <h5 class="title">Founder/Story Teller</h5>
-                </div>
-                <div class="bioText">Sayanth is a founder and story teller.<br><br>
-                </div>
-
-            </div>
-        </a>
-        <a href="javascript:void(0);" title="Koby Conrad - CEO">
-                <div class="about__slot">
-                    <div class="headshot" onclick="biograph(this.parentNode);"
-                        style="background-image:url('http://placekitten.com/254/254');"></div>
-    
-                    <div class="about__info">
-                        <h4 class="name">Harbor Neher</h4>
-                        <h5 class="title">Story Teller</h5>
-                    </div>
-                    <div class="bioText">Harbor Neher is a lorem ipsum dalor set amet consectur adipscing.<br><br>
-                    </div>
-    
-                </div>
-            </a>
-        <a href="javascript:void(0);" title="Sarah Spoja - Staff Writer">
-            <div class="about__slot">
-                <div class="headshot" onclick="biograph(this.parentNode);"
-                    style="background-image:url('http://placekitten.com/284/284');"></div>
-
-                <div class="about__info">
-                    <h4 class="name">Sarah Spoja</h4>
-                    <h5 class="title">Story Teller</h5>
-                </div>
-                <div class="bioText">Sarah Spoja is a lorem ipsum dalor set amet consectur adipscing.<br><br>
-                </div>
-
-
-            </div>
-        </a>
-        <a href="javascript:void(0);" title="Malik Ali - Account Manager">
-            <div class="about__slot">
-                <div class="headshot" onclick="biograph(this.parentNode);"
-                    style="background-image:url('http://placekitten.com/294/294');"></div>
-
-                <div class="about__info">
-                    <h4 class="name">Malik Ali</h4>
-                    <h5 class="title">Photographer</h5>
-                </div>
-                <div class="bioText">Malik Ali is a lorem ipsum dalor set amet consectur adipscing.<br><br>
-                </div>
-
-            </div>
-        </a>
-
-    </div>
-
-</section>
     <!-- contact
     ================================================== -->
     <section id="contact" class="s-contact">
@@ -606,7 +543,7 @@
 
 
         <div class="overlay"></div>
-        <!-- <div class="contact__line"></div> -->
+        <div class="contact__line"></div> 
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -719,6 +656,75 @@
     </section> <!-- end s-contact -->
 
 
+    <!-- Team
+    ================================================== -->
+    <section id="Team" class="s-team">
+            <h3 class="subhead">Meet the Team</h3>
+            <h1 class="display-2 display-2--light">The travel enthusiasts we talked about</h1>
+            <div class="about__section">
+                    
+                <!-- Specificity container -->
+                <a href="javascript:void(0);" title="Sayanth Perambra - Founder">
+                    <div class="about__slot">
+                        <div class="headshot" onclick="biograph(this.parentNode);"
+                            style="background-image:url('https://i.ibb.co/JCZCcfR/team1.jpg');"></div>
+        
+                        <div class="about__info">
+                            <h4 class="name">Sayanth Perambra</h4>
+                            <h5 class="title">Founder/Story Teller</h5>
+                        </div>
+                        <div class="bioText">Sayanth is a founder and story teller.<br><br>
+                        </div>
+        
+                    </div>
+                </a>
+                <a href="javascript:void(0);" title="Koby Conrad - CEO">
+                        <div class="about__slot">
+                            <div class="headshot" onclick="biograph(this.parentNode);"
+                                style="background-image:url('http://placekitten.com/254/254');"></div>
+            
+                            <div class="about__info">
+                                <h4 class="name">Harbor Neher</h4>
+                                <h5 class="title">Story Teller</h5>
+                            </div>
+                            <div class="bioText">Harbor Neher is a lorem ipsum dalor set amet consectur adipscing.<br><br>
+                            </div>
+            
+                        </div>
+                    </a>
+                <a href="javascript:void(0);" title="Sarah Spoja - Staff Writer">
+                    <div class="about__slot">
+                        <div class="headshot" onclick="biograph(this.parentNode);"
+                            style="background-image:url('http://placekitten.com/284/284');"></div>
+        
+                        <div class="about__info">
+                            <h4 class="name">Sarah Spoja</h4>
+                            <h5 class="title">Story Teller</h5>
+                        </div>
+                        <div class="bioText">Sarah Spoja is a lorem ipsum dalor set amet consectur adipscing.<br><br>
+                        </div>
+        
+        
+                    </div>
+                </a>
+                <a href="javascript:void(0);" title="Malik Ali - Account Manager">
+                    <div class="about__slot">
+                        <div class="headshot" onclick="biograph(this.parentNode);"
+                            style="background-image:url('http://placekitten.com/294/294');"></div>
+        
+                        <div class="about__info">
+                            <h4 class="name">Malik Ali</h4>
+                            <h5 class="title">Photographer</h5>
+                        </div>
+                        <div class="bioText">Malik Ali is a lorem ipsum dalor set amet consectur adipscing.<br><br>
+                        </div>
+        
+                    </div>
+                </a>
+        
+            </div>
+        
+        </section>
     <!-- footer
     ================================================== -->
     <footer>
@@ -828,12 +834,39 @@
         </div>
     </div>
 
+    
+<div class="pop-up">
+        <div class="content">
+          <div class="container">
+            <div class="dots">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            
+            <span class="close">X</span>
+          
+            
+            <img src="images/poster.jpg" alt="Car">
+        
+            <div class="home-content__buttons">
+                    <a href="https://docs.google.com/forms/d/1yar7rHT-i8a1i6ngctdbta3blydqsURn82zBJfduOhE/viewform?fbclid=IwAR0LuBs4RLhg_QZGlIlqwEERmbZoxDHMcJKQ_vvIDZBRyFKvtlbzZaZ0-b0&edit_requested=true" class="registerButton" target="_blank">
+                        Register
+                    </a>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 

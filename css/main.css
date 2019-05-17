@@ -1819,6 +1819,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding-top: 6rem;
     text-align: left;
 }
+.home-content__buttons>div{
+    padding-top: 3rem;
+    text-align: left;
+}
 
 .home-content__buttons .btn {
     width: 215px;
@@ -1840,6 +1844,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #000000;
 }
 
+.eventImage{
+    display: inline;
+    min-width: 500px;
+}
+.eventImage>img{
+    object-fit: cover;
+}
 .home-content__scroll {
     position: absolute;
     right: 9.5rem;

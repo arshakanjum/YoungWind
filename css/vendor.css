@@ -19,7 +19,7 @@
  *
  * ------------------------------------------------------------------- */
 [data-aos][data-aos][data-aos-duration='50'], body[data-aos-duration='50'] [data-aos] {
-    transition-duration: 50ms;
+    transition-duration: 20ms;
 }
 
 [data-aos][data-aos][data-aos-delay='50'], body[data-aos-delay='50'] [data-aos] {
@@ -27,7 +27,7 @@
 }
 
 [data-aos][data-aos][data-aos-delay='50'].aos-animate, body[data-aos-delay='50'] [data-aos].aos-animate {
-    transition-delay: 50ms;
+    transition-delay: 20ms;
 }
 
 [data-aos][data-aos][data-aos-duration='100'], body[data-aos-duration='100'] [data-aos] {
