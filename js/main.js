@@ -44,6 +44,15 @@
         });
     };
 
+    var biograph = function(e) {
+        if(e.className == 'about__slot') {
+            e.className = 'about__slot bio';
+        }
+        else {
+            e.className = 'about__slot';
+        }
+    };
+
 
    /* Menu on Scrolldown
     * ------------------------------------------------------ */
@@ -445,6 +454,7 @@
             }
         });
     };
+   
 
 
    /* Initialize
@@ -465,8 +475,11 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
-
+        biograph();
     })();
+
+    
+    
         
         
 })(jQuery);
