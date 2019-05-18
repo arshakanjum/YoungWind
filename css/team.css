@@ -88,6 +88,19 @@
     position:absolute;
     left:0;
     bottom:0;
+    top:210px;
+    right:0;
+    pointer-events:none;
+    z-index:9;
+    -webkit-transition:all 0.3s linear;
+    
+  }
+  
+@media only screen and (max-width: 600px) {
+  .about__slot .about__info {
+    position:absolute;
+    left:0;
+    bottom:0;
     top:220px;
     right:0;
     pointer-events:none;
@@ -95,6 +108,21 @@
     -webkit-transition:all 0.3s linear;
     
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .about__slot .about__info {
+    position:absolute;
+    left:0;
+    bottom:0;
+    top:220px;
+    right:0;
+    pointer-events:none;
+    z-index:9;
+    -webkit-transition:all 0.3s linear;
+    
+  }
+}
   /*BOOM */
   .about__slot .headshot {
     margin:auto;
