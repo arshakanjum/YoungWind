@@ -2403,6 +2403,12 @@ html.no-csstransitions .home-content__main {
 .services-list .service-item {
     margin-bottom: .9rem;
 }
+.services-list .service-item:hover {
+    background: #dfdfdf;
+    cursor: pointer;
+    
+    /* box-shadow: 1px 1px 10px #e50000; */
+}
 
 .services-list .service-item h3 {
     margin-top: 0;
@@ -2425,6 +2431,7 @@ html.no-csstransitions .home-content__main {
 }
 .services-list .service-text>p {
     margin-left: -4rem;
+    text-align: justify;
 }
 .services-list .service-text>h3.h2 {
     min-height: 50px;
@@ -2459,10 +2466,10 @@ html.no-csstransitions .home-content__main {
         font-size: 2.5rem;
     }
     .services-list .service-item:nth-child(2n+1) {
-        padding-right: 20px;
+        padding-right: 15px;
     }
     .services-list .service-item:nth-child(2n+2) {
-        padding-left: 20px;
+        padding-left: 15px;
     }
 }
 

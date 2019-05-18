@@ -448,27 +448,74 @@
     };
 var popup = function(){
     $('.eventButton').click(function(e){
-        $('.pop-up').addClass('open');
+        $('#eventPopup').addClass('open');
         e.stopPropagation();
       });
       
       $('.pop-up .close').click(function(){
-        $('.pop-up').removeClass('open');
+        $('#eventPopup').removeClass('open');
       });
 
       $(document).keydown(function(e) {
         // ESCAPE key pressed
         if (e.keyCode == 27) {
-            $('.pop-up').removeClass('open');
+            $('#eventPopup').removeClass('open');
         }
     });
     $('body').click(function(e){
-        if ($('.pop-up').hasClass('open')){
-            $('.pop-up').removeClass('open');
+        if ($('#eventPopup').hasClass('open')){
+            $('#eventPopup').removeClass('open');
         }
     });
 };
 
+var spacePopup = function(){
+    $('.service-item').click(function(e){
+        $('#spacePopup').addClass('open');
+        e.stopPropagation;
+    
+    });
+    $('.pop-up .close').click(function(){
+        $('#spacePopup').removeClass('open');
+      });
+    // $('body').click(function(e){
+    //     if ($('#spacePopup').hasClass('open')){
+    //         $('#spacePopup').removeClass('open');
+    //     }
+    // });
+}
+
+var $title = $('.js-title');
+var copy   = '.js-copy';
+var accordion = function(){
+$title.click(function () {
+  $(this).next(copy).slideToggle();
+  $(this).parent().siblings().children().next().slideUp();
+  return false;
+});
+};
+
+var popupImage = function(){
+    $('.img-list a').on('click', function(e){
+      e.preventDefault();
+  
+      var imgLink = $(this).children('img').attr('src');
+  
+      $('.mask').html('<div class="img-box"><img src="'+ imgLink +'"><a class="close">&times;</a>');
+  
+      $('.mask').addClass('is-visible fadein').on('animationend', function(){
+        $(this).removeClass('fadein is-visible').addClass('is-visible');
+      });
+  
+      $('.close').on('click', function(){
+        $(this).parents('.mask').addClass('fadeout').on('animationend', function(){
+          $(this).removeClass('fadeout is-visible')
+        });
+      });
+  
+    });
+  };
+  
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -487,7 +534,9 @@ var popup = function(){
         clAOS();
         clAjaxChimp();
         clBackToTop();
-        
+        popupImage();
+        accordion();
+        spacePopup();
     })();
 
     
