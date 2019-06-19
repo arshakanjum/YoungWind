@@ -446,6 +446,28 @@
             }
         });
     };
+    var popupImage = function(){
+        $('.img-list a').on('click', function(e){
+          e.preventDefault();
+        
+          var imgLink = $(this).children('img').attr('src');
+      
+          $('.mask').html('<div class="img-box"><img src="'+ imgLink +'"><a class="close">&times;</a>');
+      
+          $('.mask').addClass('is-visible fadein').on('animationend', function(){
+            $(this).removeClass('fadein is-visible').addClass('is-visible');
+          });
+      
+          $('.close').on('click', function(){
+           
+            $(this).parents('.mask').addClass('fadeout').on('animationend', function(){
+              $(this).removeClass('fadeout is-visible')
+              e.stopImmediatePropagation();
+            });
+          });
+          e.stopPropagation();
+        });
+      };
 var popup = function(){
     $('.eventButton').click(function(e){
         $('#eventPopup').addClass('open');
@@ -462,7 +484,7 @@ var popup = function(){
             $('#eventPopup').removeClass('open');
         }
     });
-    $('body').click(function(e){
+    $('section').not('#eventPopup').click(function(e){
         if ($('#eventPopup').hasClass('open')){
             $('#eventPopup').removeClass('open');
         }
@@ -472,17 +494,17 @@ var popup = function(){
 var spacePopup = function(){
     $('.service-item').click(function(e){
         $('#spacePopup').addClass('open');
-        e.stopPropagation;
+        e.stopImmediatePropagation();
     
     });
     $('.pop-up .close').click(function(){
         $('#spacePopup').removeClass('open');
       });
-    // $('body').click(function(e){
-    //     if ($('#spacePopup').hasClass('open')){
-    //         $('#spacePopup').removeClass('open');
-    //     }
-    // });
+    $('section').not('#spacePopup').click(function(e){
+        if ($('#spacePopup').hasClass('open')){
+            $('#spacePopup').removeClass('open');
+        }
+    });
 }
 
 var $title = $('.js-title');
@@ -495,26 +517,7 @@ $title.click(function () {
 });
 };
 
-var popupImage = function(){
-    $('.img-list a').on('click', function(e){
-      e.preventDefault();
-  
-      var imgLink = $(this).children('img').attr('src');
-  
-      $('.mask').html('<div class="img-box"><img src="'+ imgLink +'"><a class="close">&times;</a>');
-  
-      $('.mask').addClass('is-visible fadein').on('animationend', function(){
-        $(this).removeClass('fadein is-visible').addClass('is-visible');
-      });
-  
-      $('.close').on('click', function(){
-        $(this).parents('.mask').addClass('fadeout').on('animationend', function(){
-          $(this).removeClass('fadeout is-visible')
-        });
-      });
-  
-    });
-  };
+
   
    /* Initialize
     * ------------------------------------------------------ */
